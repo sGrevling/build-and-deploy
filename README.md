@@ -1,4 +1,4 @@
-# build-and-deploy
+# build-deploy-and-conquer
 
 This exercise is a javascript application, which currently is only partly implemented.
 Using continuous integration and continuous deployment, we will utilize some cloud tools to provide the deployment pipeline.
