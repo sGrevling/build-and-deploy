@@ -176,12 +176,26 @@ describe('the calculation controller', function () {
     describe('multiply operator', function(){
       var operator = 'multiply';
 
-      it('should not be implemented', function(){
+      it('10 * 10 = 100', function(){
         var ctrl = createController();
         ctrl.calculate(10, 10, operator);
 
-        expect(ctrl.result).toBe('Operator not implemented');
+        expect(ctrl.result).toBe(100);
       });
+
+		it('10 * -10 = -100', function(){
+			var ctrl = createController();
+			ctrl.calculate(10, -10, operator);
+
+			expect(ctrl.result).toBe(-100);
+		});
+
+		it('10 * 0 = 100', function(){
+			var ctrl = createController();
+			ctrl.calculate(10, 0, operator);
+
+			expect(ctrl.result).toBe(0);
+		});
     });
 
     it('undefined operator should not be implemented', function(){
